@@ -692,6 +692,9 @@ main {
   text-align: justify;
   border-top: rgb(58, 128, 169) solid 2px;
 }
+.seccion-blog h2 {
+  text-align: start;
+}
 
 :root {
   /* Paleta de colores */
