@@ -1,0 +1,49 @@
+@use '../variables' as v;
+@use '../tipografia';
+@use '../mixins' as m;
+@use '../buttons';
+
+// Logo
+.logo {
+    width: 180px !important;
+}
+
+.navbar {
+    background-color: v.$fondoContenido;
+    border-bottom: 3px solid v.$gris; 
+    font-family: 'fuente-cuerpo';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-collapse {
+    @include m.content-center;
+}
+
+.nav-link.active {
+    color: v.$azul !important;
+}
+
+.nav-item {
+    a {
+        color: v.$morado;
+        &:hover {
+            color: v.$azul;
+            @include m.underline-wavy
+        }
+    }
+}
+
+.form-control {
+    border: v.$gris solid 2px !important;
+    --bs-focus-ring-color: #{v.$focusRing} !important;
+}
+
+.busqueda {
+    max-width: 20%;
+
+    @include m.media-max (1200px) {
+        max-width: 100%;
+    }
+
+}
